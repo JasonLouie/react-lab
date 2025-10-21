@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header {
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#search {
+    width: 90%;
+    height: 20px;
+    border: 1px solid #c5c5c5;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: fit-content;
+}
+
+.employee-list {
+    width: 90%;
+    height: fit-content;
+}
+
+.employee-item {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    width: inherit;
+}
+
+.preview-name, .preview-position {
+    margin: 4px 6px;
+}
+
+.preview-pic {
+    border: 1px solid green;
+    border-radius: 50%;
+    width: 55px;
+    height: auto;
+}
+
+.preview-name {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.gray {
+    color: #707070;
+}
+
+/* Employee page styling */
+
+#profile, .phone-num {
+    width: 90%;
+    padding: 4px 5px;
+    border: 1px solid #c5c5c5;
+    display: flex;
+    align-items: center;
+}
+
+#profile {
+    border-radius: 6px 6px 0 0;
+}
+
+#employee-pic {
+    border: 1px solid green;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+#details {
+    margin-left: 10px;
+}
+
+.name, .position {
+    margin: 4px 0;
+}
+
+.phone-num {
+    justify-content: space-between;
+    border-top: none;
+}
+
+.type, .number {
+    margin: 4px 8px;
+}
+
+.type {
+    font-weight: 500;
+}
+
+.phone-num:last-child {
+    border-radius: 0 0 6px 6px;
+}
