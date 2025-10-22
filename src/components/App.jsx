@@ -1,6 +1,5 @@
 import Homepage from './Homepage';
 import EmployeePage from './EmployeePage';
-import '../styles.css';
 
 export default function App() {
 

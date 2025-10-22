@@ -1,5 +1,4 @@
 import EmployeeListItem from "./EmployeeListItem";
-import '../styles.css';
 
 export default function EmployeeList() {
     return (

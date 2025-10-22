@@ -1,4 +1,3 @@
-import '../styles.css';
 import Header from './Header';
 import Profile from './Profile';
 import Number from './Number';

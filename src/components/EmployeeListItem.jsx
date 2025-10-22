@@ -1,4 +1,3 @@
-import '../styles.css';
 export default function EmployeeListItem() {
     return (
         <div className="employee-item">
