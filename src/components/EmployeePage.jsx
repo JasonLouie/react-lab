@@ -1,16 +1,17 @@
 import Header from './Header';
 import Profile from './Profile';
 import Contact from './Contact';
+import { contacts } from "../data.js";
 
 export default function EmployeePage() {
+
+    const contactContent = contacts.map(c => <Contact key={c.type} {...c} />);
+
     return (
         <div className='page'>
-            <Header nested={true} />
-            <Profile name="Tommy Pickles" src="/images/tommypickles.jpg" position="Rugrats Protagonist"/>
-            <Contact type="Call Home" info="111-111-1234" />
-            <Contact type="Call Cell" info="222-345-9876" />
-            <Contact type="Call Office" info="544-432-2321" />
-            <Contact type="Email" info="tommypickles@gmail.com"/>
+            <Header nested={true} title="Employee Directory" />
+            <Profile name="Tommy Pickles" src="/images/tommypickles.jpg" position="Professional Napper"/>
+            {contactContent}
         </div>
     );
 }
