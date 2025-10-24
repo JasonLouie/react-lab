@@ -1,4 +1,4 @@
-export default function Number() {
+export default function Contact() {
     return (
         <div className='phone-num'>
             <div>
@@ -6,7 +6,7 @@ export default function Number() {
                 <p className='number gray'>000-000-0000</p>
             </div>
             <div>
-                <p>Arrow</p>
+                <p>{">"}</p>
             </div>
         </div>
     );

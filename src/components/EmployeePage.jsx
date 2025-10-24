@@ -1,16 +1,16 @@
 import Header from './Header';
 import Profile from './Profile';
-import Number from './Number';
+import Contact from './Contact';
 
 export default function EmployeePage() {
     return (
         <div className='page'>
             <Header />
             <Profile />
-            <Number />
-            <Number />
-            <Number />
-            <Number />
+            <Contact />
+            <Contact />
+            <Contact />
+            <Contact />
         </div>
     );
 }
