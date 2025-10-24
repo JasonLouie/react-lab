@@ -39,7 +39,7 @@ body {
 }
 
 .employee-item {
-    padding: 6px 0;
+    margin: 6px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -100,7 +100,7 @@ body {
     border-top: none;
 }
 
-:is(.employee-item, .employee-item, .contact):hover {
+:is(.employee-item, .contact):hover {
     background-color: #f0f0f0;
     cursor: pointer;
 }
