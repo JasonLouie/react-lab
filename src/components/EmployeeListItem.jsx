@@ -1,10 +1,10 @@
-export default function EmployeeListItem() {
+export default function EmployeeListItem(props) {
     return (
         <div className="employee-item">
-            <img className="preview-pic" src="../../public/images/tommypickles.jpg" alt="Employee Pic" />
+            <img className="preview-pic" src={props.src || "/images/profile.png"} alt="Employee Pic" />
             <div className='preview'>
-                <h2 className='preview-name'>Tommy Pickles</h2>
-                <p className='preview-position gray'>Frontend Developer</p>
+                <h2 className='preview-name'>{props.name || "Default Name"}</h2>
+                <p className='preview-position gray'>{props.position || "Default Position"}</p>
             </div>
         </div>
     );

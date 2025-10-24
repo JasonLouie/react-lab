@@ -1,5 +1,5 @@
-export default function Header() {
+export default function Header(props) {
     return (
-        <h3 className='header'>Employee Directory</h3>
+        <p className='header'>{props.nested && <span className="arrow arrow-heading">{"<"}</span>}Employee{!props.nested && " Directory"}</p>
     );
 }
