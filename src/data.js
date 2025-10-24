@@ -11,27 +11,27 @@ export const employeeList = [
     },
     {
         name: "John Doe",
-        position: "Professional Napper"
+        position: "Webmaster"
     },
     {
         name: "Jane Smith",
-        position: "Professional Napper"
+        position: "Full Stack Developer"
     },
     {
         name: "Mike Jones",
-        position: "Professional Napper"
+        position: "Front-End Developer"
     },
     {
         name: "Mary Anderson",
-        position: "Professional Napper"
+        position: "Marketing Manager"
     },
     {
         name: "Susan Lee",
-        position: "Professional Napper"
+        position: "Social Media Manager"
     },
     {
         name: "James Johnson",
-        position: "Professional Napper"
+        position: "Accountant"
     }
 ];
 
