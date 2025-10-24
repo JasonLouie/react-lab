@@ -5,7 +5,7 @@ import EmployeeList from './EmployeeList';
 export default function Homepage () {
     return (
         <div className='page'>
-            <Header title="Employee" />
+            <Header title="Employee Directory" />
             <SearchBar />
             <EmployeeList />
         </div>

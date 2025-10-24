@@ -9,7 +9,7 @@ export default function EmployeePage() {
 
     return (
         <div className='page'>
-            <Header nested={true} title="Employee Directory" />
+            <Header nested={true} title="Employee" />
             <Profile name="Tommy Pickles" src="/images/tommypickles.jpg" position="Professional Napper"/>
             {contactContent}
         </div>
