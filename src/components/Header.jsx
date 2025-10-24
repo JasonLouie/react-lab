@@ -1,5 +1,5 @@
-export default function Header() {
+export default function Header({nested, title}) {
     return (
-        <h3 className='header'>Employee Directory</h3>
+        <p className='header'>{nested && <span className="arrow arrow-heading">{"<"}</span>}{title || "No Title"}</p>
     );
 }
