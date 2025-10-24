@@ -13,6 +13,8 @@ body {
     text-align: center;
     width: 100%;
     margin: 10px 0;
+    font-size: 22px;
+    position: relative;
 }
 
 #search {
@@ -40,18 +42,21 @@ body {
     padding: 6px 0;
     display: flex;
     align-items: center;
-    width: inherit;
+    width: 100%;
 }
 
 .preview-name, .preview-position {
     margin: 4px 6px;
 }
 
-.preview-pic {
-    border: 1px solid green;
+.preview-pic, #employee-pic {
+    border: 1px solid black;
     border-radius: 50%;
+}
+
+.preview-pic {
     width: 55px;
-    height: auto;
+    height: 55px;
 }
 
 .preview-name {
@@ -65,7 +70,7 @@ body {
 
 /* Employee page styling */
 
-#profile, .phone-num {
+#profile, .contact {
     width: 90%;
     padding: 4px 5px;
     border: 1px solid #c5c5c5;
@@ -78,8 +83,6 @@ body {
 }
 
 #employee-pic {
-    border: 1px solid green;
-    border-radius: 50%;
     width: 75px;
     height: 75px;
 }
@@ -92,9 +95,14 @@ body {
     margin: 4px 0;
 }
 
-.phone-num {
+.contact {
     justify-content: space-between;
     border-top: none;
+}
+
+:is(.employee-item, .employee-item, .contact):hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 .type, .number {
@@ -105,6 +113,17 @@ body {
     font-weight: 500;
 }
 
-.phone-num:last-child {
+.contact:last-child {
     border-radius: 0 0 6px 6px;
+}
+
+.arrow {
+    margin-right: 5px;
+    transform: scale(0.8, 1.4);
+}
+
+.arrow-heading {
+    color: blue;
+    position: absolute;
+    left: 5%;
 }

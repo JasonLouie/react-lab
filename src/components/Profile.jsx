@@ -1,10 +1,10 @@
-export default function Profile() {
+export default function Profile(props) {
     return (
         <div id="profile">
-            <img src="../../public/images/tommypickles.jpg" id="employee-pic" alt="Employee Pic" />
+            <img src={props.src || "/images/profile.png"} id="employee-pic" alt="Employee Pic" />
             <div id="details">
-                <h1 className='name'>Name</h1>
-                <p className='position gray'>Position</p>
+                <h1 className='name'>{props.name || "Default Name"}</h1>
+                <p className='position gray'>{props.position || "Default Position"}</p>
             </div>
         </div>
     );
