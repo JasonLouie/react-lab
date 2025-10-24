@@ -13,7 +13,7 @@ export default function Homepage () {
 
     return (
         <div className='page'>
-            <Header title="Employee"/>
+            <Header title="Employee Directory"/>
             <SearchBar onChange={handleChange}/>
             <EmployeeList filter={input}/>
         </div>
