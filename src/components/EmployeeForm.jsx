@@ -1,7 +1,7 @@
 import Header from "./Header.jsx";
 import { useState } from "react";
 
-export default function EmployeeForm({setEmployees}) {
+export default function EmployeeForm({setEmployees, hidden}) {
 
     const [formData, setFormData] = useState({name: "", position: "", src: "/images/profile.png"});
 
@@ -18,12 +18,12 @@ export default function EmployeeForm({setEmployees}) {
     }
 
     return (
-        <div className="page form-container">
+        <div className={`form-container flex ${hidden && "hidden"}`}>
             <Header title="Employee Form" />
             <form className="" onSubmit={submitForm}>
                 <input className="field" type="text" name="name" id="name" placeholder="name" onChange={handleChange} value={formData.name} />
                 <input className="field" type="text" name="position" id="position" placeholder="position" onChange={handleChange} value={formData.position} />
-                <button type="submit">Add Employee</button>
+                <button type="submit" id="submit">Add Employee</button>
             </form>
         </div>
     )

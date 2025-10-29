@@ -8,11 +8,17 @@ import { useState } from 'react';
 export default function App() {
     const [employees, setEmployees] = useState(employeeList);
 
+    const [hidden, setHidden] = useState(true);
+
+    function toggleForm() {
+        setHidden(prev => !prev);
+    }
+
     return (
-        <div className='flex'>
-            <Homepage employeeList={employees}/>
+        <div className='flex container'>
+            <Homepage employeeList={employees} toggleForm={toggleForm} hidden={hidden}/>
             <EmployeePage {...employeeList[0]}/>
-            <EmployeeForm setEmployees={setEmployees} />
+            <EmployeeForm setEmployees={setEmployees} hidden={hidden}/>
         </div>
     )
 }
