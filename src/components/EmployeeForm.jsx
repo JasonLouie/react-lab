@@ -1,19 +1,19 @@
 import Header from "./Header.jsx";
-import { employeeList } from "../data.js";
 import { useState } from "react";
 
-export default function EmployeeForm() {
+export default function EmployeeForm({setEmployees}) {
 
-    const [inputs, setInputs] = useState({name: "", position: ""});
+    const [formData, setFormData] = useState({name: "", position: "", src: "/images/profile.png"});
 
     function handleChange(e) {
-        setInputs({...inputs, [e.target.name]: e.target.name})
+        setFormData({...formData, [e.target.name]: e.target.value});
     }
 
     function submitForm(e) {
         e.preventDefault();
-        if (e.elements["name"] && e.elements["position"]) {
-            employeeList.push({name: e.elements["name"], position: e.elements["position"]});
+        if (formData.name && formData.position) {
+            setEmployees(prev => [...prev, formData]);
+            setFormData({...formData, name: "", position: ""});
         }
     }
 
@@ -21,8 +21,9 @@ export default function EmployeeForm() {
         <div className="page form-container">
             <Header title="Employee Form" />
             <form className="" onSubmit={submitForm}>
-                <input className="field" type="text" name="name" id="name" placeholder="name" onChange={handleChange} />
-                <input className="field" type="text" name="position" id="position" placeholder="position" onChange={handleChange} />
+                <input className="field" type="text" name="name" id="name" placeholder="name" onChange={handleChange} value={formData.name} />
+                <input className="field" type="text" name="position" id="position" placeholder="position" onChange={handleChange} value={formData.position} />
+                <button type="submit">Add Employee</button>
             </form>
         </div>
     )
