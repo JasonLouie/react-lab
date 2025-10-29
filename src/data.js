@@ -2,37 +2,17 @@ export const employeeList = [
     {
         name: "Tommy Pickles",
         src: "/images/tommypickles.jpg",
-        position: "Professional Napper"
+        position: "Frontend Developer"
     },
     {
         name: "Chuckie Finster",
         src: "/images/chuckiefinster.png",
-        position: "Scaredy Cat"
+        position: "QA Engineer"
     },
-    {
-        name: "John Doe",
-        position: "Webmaster"
-    },
-    {
-        name: "Jane Smith",
-        position: "Full Stack Developer"
-    },
-    {
-        name: "Mike Jones",
-        position: "Front-End Developer"
-    },
-    {
-        name: "Mary Anderson",
-        position: "Marketing Manager"
-    },
-    {
-        name: "Susan Lee",
-        position: "Social Media Manager"
-    },
-    {
-        name: "James Johnson",
-        position: "Accountant"
-    }
+    { name: "Angelica Pickles", position: "UX Designer", src: "/images/angelicapickles.jpg" },
+    { name: "Phil DeVille", position: "DevOps Engineer", src: "/images/phildeville.webp" },
+    { name: "Lil DeVille", position: "Accessibility Advocate", src: "/images/lildeville.png" },
+    { name: "Susie Carmichael", position: "Developer Advocate", src: "/images/susiecarmichael.png" }
 ];
 
 export const contacts = [

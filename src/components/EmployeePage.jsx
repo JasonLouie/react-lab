@@ -3,14 +3,14 @@ import Profile from './Profile';
 import Contact from './Contact';
 import { contacts } from "../data.js";
 
-export default function EmployeePage() {
+export default function EmployeePage({name, src, position}) {
 
     const contactContent = contacts.map(c => <Contact key={c.type} {...c} />);
 
     return (
         <div className='page'>
             <Header nested={true} title="Employee" />
-            <Profile name="Tommy Pickles" src="/images/tommypickles.jpg" position="Professional Napper"/>
+            <Profile name={name || "Default Name"} src={src || "/images/profile.png"} position={position || "Default Position"}/>
             {contactContent}
         </div>
     );
