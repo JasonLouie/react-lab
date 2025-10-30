@@ -79,6 +79,14 @@ body {
     position: relative;
 }
 
+.delete-employee {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    cursor: pointer;
+    border: none;
+}
+
 .preview-name, .preview-position {
     margin: 4px 6px;
 }

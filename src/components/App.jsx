@@ -16,7 +16,7 @@ export default function App() {
 
     return (
         <div className='flex container'>
-            <Homepage employeeList={employees} toggleForm={toggleForm} hidden={hidden}/>
+            <Homepage employeeList={employees} toggleForm={toggleForm} hidden={hidden} setEmployees={setEmployees}/>
             <EmployeePage {...employeeList[0]}/>
             <EmployeeForm setEmployees={setEmployees} hidden={hidden}/>
         </div>
