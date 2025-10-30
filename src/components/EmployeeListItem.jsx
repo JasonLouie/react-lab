@@ -1,4 +1,5 @@
 export default function EmployeeListItem({name, position, src}) {
+    
     return (
         <div className="employee-item">
             <img className="preview-pic" src={src || "/images/profile.png"} alt="Employee Pic" />
