@@ -5,7 +5,7 @@ export default function EmployeeListItem({name, position, src, setEmployees}) {
 
     function toggleHover(e) {
         if (e.currentTarget.contains(e.target)) {
-            setHover(e._reactName === "onMouseEnter" ? true : false);
+            setHover(e.type === "mouseenter" ? true : false);
         }
     }
 
