@@ -7,7 +7,8 @@ export default function EmployeeFormUncontrolled({setEmployees, hidden}) {
 
     function submitForm(e) {
         e.preventDefault();
-        const [name, position] = [formRef.current.name.value, formRef.current.position.value];
+        const name = formRef.current.name.value;
+        const position = formRef.current.position.value;
         if (name && position) {
             setEmployees(prev => [...prev, {name, position, src: "/images/profile.png"}]);
             formRef.current.reset();
