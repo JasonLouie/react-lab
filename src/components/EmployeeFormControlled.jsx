@@ -21,8 +21,8 @@ export default function EmployeeFormControlled({setEmployees, hidden}) {
         <div className={`form-container flex ${hidden && "hidden"}`}>
             <Header title="Employee Form" />
             <form className="" onSubmit={submitForm}>
-                <input className="field" type="text" name="name" id="name" placeholder="name" onChange={handleChange} value={formData.name} />
-                <input className="field" type="text" name="position" id="position" placeholder="position" onChange={handleChange} value={formData.position} />
+                <input className="field" type="text" name="name" id="name" placeholder="Name" onChange={handleChange} value={formData.name} />
+                <input className="field" type="text" name="position" id="position" placeholder="Position" onChange={handleChange} value={formData.position} />
                 <button type="submit" id="submit">Add Employee</button>
             </form>
         </div>
