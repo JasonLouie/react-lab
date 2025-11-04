@@ -1,7 +1,7 @@
 import Header from "./Header.jsx";
 import { useState } from "react";
 
-export default function EmployeeForm({setEmployees, hidden}) {
+export default function EmployeeFormControlled({setEmployees, hidden}) {
 
     const [formData, setFormData] = useState({name: "", position: "", src: "/images/profile.png"});
 

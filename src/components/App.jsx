@@ -1,6 +1,7 @@
 import Homepage from './Homepage';
 import EmployeePage from './EmployeePage';
-import EmployeeForm from './EmployeeForm';
+import EmployeeFormControlled from './EmployeeFormControlled.jsx';
+import EmployeeFormUncontrolled from './EmployeeFormUncontrolled.jsx';
 import { employeeList } from "../data.js";
 import { useState } from 'react';
 
@@ -18,7 +19,7 @@ export default function App() {
         <div className='flex container'>
             <Homepage employeeList={employees} toggleForm={toggleForm} hidden={hidden} setEmployees={setEmployees}/>
             <EmployeePage {...employeeList[0]}/>
-            <EmployeeForm setEmployees={setEmployees} hidden={hidden}/>
+            <EmployeeFormUncontrolled setEmployees={setEmployees} hidden={hidden}/>
         </div>
     )
 }
