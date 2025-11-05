@@ -1,6 +1,5 @@
 import Homepage from './Homepage';
 import EmployeePage from './EmployeePage';
-import ErrorPage from './ErrorPage';
 // import EmployeeFormControlled from './EmployeeFormControlled';
 import EmployeeFormUncontrolled from './EmployeeFormUncontrolled';
 import { useState, useEffect } from 'react';
@@ -53,9 +52,9 @@ export default function App() {
 
     function showEmployeePage() {
         if (!employees || employees.length === 0) {
-            return <ErrorPage nested={true} title="Employee" message="No Employee Credentials Found" />;
+            return <EmployeePage message="No Employee Credentials Found" />;
         } else if (selected === 0) { // Prompt user to select another employee
-            return <ErrorPage nested={true} title="Employee" message="Click on an employee to view their contact information." />;
+            return <EmployeePage message="Click on an employee to view their contact information." />;
         } else if (employees) { // Show that employee's contact info
             return <EmployeePage { ...employees.find(e => e.id === selected) } contact={contacts[selected]}/>;
         }
