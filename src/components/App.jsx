@@ -26,13 +26,11 @@ export default function App() {
             const contactObj = {};
 
             const employeeList = users.map(u => { 
-                const contactInfo = [];
-
                 const keys = ["website", "email", "phone"];
 
-                keys.forEach(key => {
+                const contactInfo = keys.map(key => {
                     if (u[key]) {
-                        contactInfo.push({type: key[0].toUpperCase() + key.slice(1), info: u[key]});
+                        return {type: key[0].toUpperCase() + key.slice(1), info: u[key]};
                     }
                 });
                 contactObj[u.id] = contactInfo;
