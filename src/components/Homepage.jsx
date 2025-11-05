@@ -12,7 +12,7 @@ export default function Homepage({employeeList, toggleForm, hidden, setEmployees
             <Header title="Employee Directory"/>
             <button type="button" className="show-form-btn" onClick={toggleForm}>{hidden ? "Add Employee" : "Hide"}</button>
             <SearchBar setInput={setInput}/>
-            <EmployeeList filter={input} list={employeeList} setEmployees={setEmployees} setSelected={setSelected}/>
+            {employeeList?.length > 0 ? <EmployeeList filter={input} list={employeeList} setEmployees={setEmployees} setSelected={setSelected}/> : <h2 className='message'>No Employees Found</h2>}
         </div>
     );
 }

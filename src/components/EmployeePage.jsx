@@ -8,7 +8,7 @@ export default function EmployeePage({ name, src, position, contact, message }) 
         <div className='page'>
             <Header nested={true} title="Employee" />
             {message ? 
-                <p style={{ textAlign: "center" }}>{message}</p> : 
+                <h2 className='message'>{message}</h2> : 
                 <>
                     <Profile name={name || "Default Name"} src={src || "/images/profile.png"} position={position || "Default Position"} />
                     {contactContent}
