@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function EmployeeListItem({name, position, src, setEmployees}) {
+export default function EmployeeListItem({id, name, position, src, setEmployees, setSelected}) {
     const [hover, setHover] = useState(false);
 
     function toggleHover(e) {
@@ -10,11 +10,14 @@ export default function EmployeeListItem({name, position, src, setEmployees}) {
     }
 
     function handleRemove() {
-        setEmployees(prev => prev.filter(p => p.name !== name));
+        setEmployees(prev => {
+            setSelected(id-1);
+            return prev.filter(p => p.name !== name);
+        });
     }
 
     return (
-        <div className="employee-item" onMouseEnter={toggleHover} onMouseLeave={toggleHover}>
+        <div className="employee-item" onMouseEnter={toggleHover} onMouseLeave={toggleHover} onClick={() => setSelected(id)}>
             <img className="preview-pic" src={src || "/images/profile.png"} alt="Employee Pic" />
             <div className='preview'>
                 <h2 className='preview-name'>{name || "Default Name"}</h2>

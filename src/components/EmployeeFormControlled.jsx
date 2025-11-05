@@ -12,7 +12,7 @@ export default function EmployeeFormControlled({setEmployees, hidden}) {
     function submitForm(e) {
         e.preventDefault();
         if (formData.name && formData.position) {
-            setEmployees(prev => [...prev, formData]);
+            setEmployees(prev => [...prev, {...formData, id: prev.length+1}]);
             setFormData({...formData, name: "", position: ""});
         }
     }

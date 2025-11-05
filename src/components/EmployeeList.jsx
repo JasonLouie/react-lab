@@ -1,11 +1,11 @@
 import EmployeeListItem from "./EmployeeListItem";
 
-export default function EmployeeList({filter, list, setEmployees}) {
-    const employees = list.map(employee => {
+export default function EmployeeList({filter, list, setEmployees, setSelected}) {
+    const employees = list ? list?.map(employee => {
         if (filter && employee.name.toLowerCase().includes(filter) || !filter){
-            return <EmployeeListItem key={employee.name} setEmployees={setEmployees} {...employee} />;
+            return <EmployeeListItem key={employee.id} setEmployees={setEmployees} setSelected={setSelected} {...employee} />;
         }
-    });
+    }) : <h1>No Employees</h1>
 
     return (
         <div className="employee-list">{employees}</div>

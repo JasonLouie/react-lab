@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import EmployeeList from './EmployeeList';
 import { useState } from 'react';
 
-export default function Homepage({employeeList, toggleForm, hidden, setEmployees}) {
+export default function Homepage({employeeList, toggleForm, hidden, setEmployees, setSelected}) {
 
     const [input, setInput] = useState("");
 
@@ -12,7 +12,7 @@ export default function Homepage({employeeList, toggleForm, hidden, setEmployees
             <Header title="Employee Directory"/>
             <button type="button" className="show-form-btn" onClick={toggleForm}>{hidden ? "Add Employee" : "Hide"}</button>
             <SearchBar setInput={setInput}/>
-            <EmployeeList filter={input} list={employeeList} setEmployees={setEmployees}/>
+            <EmployeeList filter={input} list={employeeList} setEmployees={setEmployees} setSelected={setSelected}/>
         </div>
     );
 }

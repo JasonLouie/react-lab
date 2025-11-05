@@ -10,7 +10,7 @@ export default function EmployeeFormUncontrolled({setEmployees, hidden}) {
         const name = formRef.current.name.value;
         const position = formRef.current.position.value;
         if (name && position) {
-            setEmployees(prev => [...prev, {name, position, src: "/images/profile.png"}]);
+            setEmployees(prev => [...prev, {id: prev.length+1, name, position, src: "/images/profile.png"}]);
             formRef.current.reset();
         }
     }
