@@ -11,7 +11,7 @@ export default function EmployeeListItem({id, name, position, src, setEmployees,
 
     function handleRemove() {
         setEmployees(prev => {
-            setSelected(id-1);
+            setSelected(0);
             return prev.filter(p => p.name !== name);
         });
     }

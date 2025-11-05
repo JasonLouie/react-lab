@@ -1,14 +1,14 @@
 import Homepage from './Homepage';
 import EmployeePage from './EmployeePage';
-import EmployeeFormControlled from './EmployeeFormControlled.jsx';
-import EmployeeFormUncontrolled from './EmployeeFormUncontrolled.jsx';
-// import { employeeList } from "../data.js";
+import ErrorPage from './ErrorPage';
+// import EmployeeFormControlled from './EmployeeFormControlled';
+import EmployeeFormUncontrolled from './EmployeeFormUncontrolled';
 import { useState, useEffect } from 'react';
 
 
 export default function App() {
     const [employees, setEmployees] = useState(null);
-    const [selected, setSelected] = useState(1);
+    const [selected, setSelected] = useState(0);
     const [contacts, setContacts] = useState(null);
 
     const [hidden, setHidden] = useState(true);
@@ -53,10 +53,20 @@ export default function App() {
         setHidden(prev => !prev);
     }
 
+    function showEmployeePage() {
+        if (!employees || employees.length === 0) {
+            return <ErrorPage nested={true} title="Employee" message="No Employee Credentials Found" />;
+        } else if (selected === 0) { // Prompt user to select another employee
+            return <ErrorPage nested={true} title="Employee" message="Click on an employee to view their contact information." />;
+        } else if (employees) { // Show that employee's contact info
+            return <EmployeePage { ...employees.find(e => e.id === selected) } contact={contacts[selected]}/>;
+        }
+    }
+
     return (
         <div className='flex container'>
             <Homepage employeeList={employees} toggleForm={toggleForm} hidden={hidden} setEmployees={setEmployees} setSelected={setSelected}/>
-            {employees ? <EmployeePage { ...employees.find(e => e.id === selected) } contact={contacts[selected]}/> : "No Employees"}
+            {showEmployeePage()}
             <EmployeeFormUncontrolled setEmployees={setEmployees} hidden={hidden}/>
         </div>
     )
